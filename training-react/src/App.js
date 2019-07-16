@@ -21,9 +21,6 @@ class App extends Component {
           this.ReactItem.length > 0 && this.ReactItem.map((item, index) => 
           <ReactItem key = {index} item = {item} />)
         }
-        {
-          this.ReactItem.length === 0 && 'Nothing Here.'
-        }
       </div>
     );
   } 
