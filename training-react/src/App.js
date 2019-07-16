@@ -4,7 +4,7 @@ import './App.css';
 import ReactItem from './components/ReactItem'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.ReactItem = [
       { title : 'Đi học', isComplete: true},
@@ -14,15 +14,18 @@ class App extends Component {
 
   }
 
-  render (){
-  return (
-    <div className="App">
-      {
-        this.ReactItem.map((item, index) => 
-            <ReactItem key = {index} item = {item} />)
-      }
-    </div>
-  );
-  }
+  render () {
+    return (
+      <div className="App">
+        {
+          this.ReactItem.length > 0 && this.ReactItem.map((item, index) => 
+          <ReactItem key = {index} item = {item} />)
+        }
+        {
+          this.ReactItem.length === 0 && 'Nothing Here.'
+        }
+      </div>
+    );
+  } 
 }
 export default App;
