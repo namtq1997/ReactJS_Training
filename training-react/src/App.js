@@ -7,9 +7,9 @@ class App extends Component {
   constructor(){
     super();
     this.ReactItem = [
-      'Đi học',
-      'Đi làm',
-      'Đi bay'
+      { title : 'Đi học', isComplete: true},
+      { title : 'Đi làm', isComplete: true},
+      { title : 'Đi bay'}
     ];
 
   }
@@ -18,7 +18,8 @@ class App extends Component {
   return (
     <div className="App">
       {
-        this.ReactItem.map((item, index) => <ReactItem key = {index} title = {item} />)
+        this.ReactItem.map((item, index) => 
+            <ReactItem key = {index} item = {item} />)
       }
     </div>
   );
